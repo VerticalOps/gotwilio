@@ -27,9 +27,9 @@ type SmsResponse struct {
 	Url         string  `json:"uri"`
 	ErrorCode   string  `json:"error_code"`
 	ErrorMsg    string  `json:"error_message"`
-	NumSegments string  `json:num_segments`
-	NumMedia    string  `json:num_media`
-	MsgSvcSid   string  `json:messaging_service_Sid`
+	NumSegments string  `json:"num_segments"`
+	NumMedia    string  `json:"num_media"`
+	MsgSvcSid   string  `json:"messaging_service_sid"`
 }
 
 // Returns SmsResponse.DateCreated as a time.Time object
