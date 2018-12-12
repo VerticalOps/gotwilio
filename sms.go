@@ -23,7 +23,13 @@ type SmsResponse struct {
 	Direction   string  `json:"direction"`
 	ApiVersion  string  `json:"api_version"`
 	Price       *string `json:"price,omitempty"`
+	PriceUnit   string  `json:"price_unit"`
 	Url         string  `json:"uri"`
+	ErrorCode   string  `json:"error_code"`
+	ErrorMsg    string  `json:"error_message"`
+	NumSegments string  `json:num_segments`
+	NumMedia    string  `json:num_media`
+	MsgSvcSid   string  `json:messaging_service_Sid`
 }
 
 // Returns SmsResponse.DateCreated as a time.Time object
