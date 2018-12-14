@@ -63,7 +63,7 @@ func (twilio *Twilio) SendSMS(from, to, body, statusCallback, applicationSid str
 // GetSMS uses Twilio to get information about a text message.
 // See https://www.twilio.com/docs/api/rest/sms for more information.
 func (twilio *Twilio) GetSMS(sid string) (smsResponse *SmsResponse, exception *Exception, err error) {
-	twilioUrl := twilio.BaseUrl + "/Accounts/" + twilio.AccountSid + "/SMS/Messages/" + sid + ".json"
+	twilioUrl := twilio.BaseUrl + "/Accounts/" + twilio.AccountSid + "/Messages/" + sid + ".json"
 
 	res, err := twilio.get(twilioUrl)
 	if err != nil {
